@@ -1,6 +1,6 @@
-import Image from "../components/Image";
-import Logo from "../assets/logo.png";
-import Item from "../components/Navber/Item";
+import Image from "../Image";
+import Logo from "../../assets/logo.png";
+import Item from "../Navber/Item";
 
 const Navber = () => {
   return (
@@ -17,7 +17,7 @@ const Navber = () => {
           </div>
         </div>
 
-        <div className="navbar-end md:w-8/12">
+        <div className="navbar-end md:w-10/12">
 
           <div className="hidden lg:flex pr-6">
             <ul className="menu menu-horizontal px-1 flex gap-x-6  text-lg font-medium font-pop justify-end">
