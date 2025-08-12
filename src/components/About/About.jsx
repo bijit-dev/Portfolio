@@ -3,7 +3,7 @@ import banner from "../../assets/banner.png";
 
 const About = () => {
     return (
-        <div className="container mx-auto px-4 md:px-8 my-20">
+        <div id="about" className="container mx-auto px-4 md:px-8 my-20">
             <h1 className="text-3xl font-bold Poppins text-white text-center mb-10">About Me</h1>
             <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
                 <div className="avatar w-full lg:w-5/12">

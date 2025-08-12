@@ -6,7 +6,7 @@ const Navber = () => {
   return (
     <nav className="sticky top-0 z-50 bg-base-100 shadow-sm">
       <div className="navbar container mx-auto px-4 md:px-8 Poppins">
-        <div className="navbar-start">
+        <div className="navbar-start cursor-pointer">
           <div className="avatar">
             <div className="ring-primary ring-offset-base-100 w-8 md:w-14 rounded-full ring ring-offset-2">
               <Image src={Logo} />
@@ -22,11 +22,11 @@ const Navber = () => {
           <div className="hidden lg:flex pr-6">
             <ul className="menu menu-horizontal px-1 flex gap-x-6  text-lg font-medium font-pop justify-end">
               <Item Item="Home" href="/" />
-              <Item Item="About" href="/about" />
-              <Item Item="Skills" href="/skills" />
-              <Item Item="Project" href="/project" />
-              <Item Item="Education" href="/education" />
-              <Item Item="Contact" href="/contact" />
+              <Item Item="About" href="#about" />
+              <Item Item="Skills" href="#skills" />
+              <Item Item="Project" href="#project" />
+              <Item Item="Education" href="#education" />
+              <Item Item="Contact" href="#contact" />
             </ul>
           </div>
 
