@@ -59,7 +59,7 @@ const Skills = () => {
             : skills.filter(skill => skill.category === activeCategory);
 
     return (
-        <section className="container mx-auto px-4 md:px-8 py-20">
+        <section id="skills" className="container mx-auto px-4 md:px-8 py-20">
             {/* Heading */}
             <div className="border-b border-white text-center mb-6">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl text-design mb-8 font-extrabold">
