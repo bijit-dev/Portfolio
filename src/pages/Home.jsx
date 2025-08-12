@@ -1,8 +1,6 @@
 import Navber from "../components/Navber/Navber"
-import Footer from "../layouts/Footer"
 import Image from "../components/Image";
-import banner from "../assets/bijit.png";
-import about from "../assets/about.gif";
+import banner from "../assets/banner.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 import xlogo from "../assets/xlogo.png";
@@ -10,23 +8,112 @@ import facebook from "../assets/facebook.jpeg";
 import Typewriter from "typewriter-effect";
 import { BsDownload } from "react-icons/bs";
 import { RiExternalLinkLine } from "react-icons/ri";
+import Footer from "../components/Footer/Footer";
+import Skills from "../components/Skills/Skills";
+import { motion } from "framer-motion";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { SiJavascript, SiMongodb } from "react-icons/si";
 
 
 const Home = () => {
     const stringValue = ["React Developer", "MERN Stack Developer", "Fontend Developer", "Full Stack Developer"];
 
+    // Image animation variants
+    const imageAnimation = {
+        initial: { opacity: 0, y: 20 },
+        animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: 'easeOut',
+            },
+        },
+        hover: {
+            y: -5,
+            transition: {
+                duration: 0.5,
+                repeat: Infinity,
+                repeatType: 'reverse',
+            },
+        },
+    };
+
+    // Glow effect animation
+    const glowAnimation = {
+        initial: { scale: 0.9, opacity: 0 },
+        animate: {
+            scale: 1,
+            opacity: [0.1, 0.2, 0.1],
+            transition: {
+                duration: 4,
+                repeat: Infinity,
+                ease: 'easeInOut',
+            },
+        },
+    };
+
+    // Floating tech icons animation
+    const techIcons = [
+        { icon: <FaReact className="text-blue-400" />, position: 'top-0 left-0' },
+        {
+            icon: <SiJavascript className="text-yellow-400" />,
+            position: 'bottom-0 right-0',
+        },
+        { icon: <FaNodeJs className="text-blue-500" />, position: 'top-0 right-0' },
+        {
+            icon: <SiMongodb className="text-green-500" />,
+            position: 'bottom-0 left-0',
+        },
+    ];
+
     return (
-        <>
+        <div className="bg-bg-base-200">
             <Navber />
 
             {/* banner part */}
             <div className="hero bg-base-200 min-h-[85vh]">
                 <div className="hero-content container mx-auto px-4 md:px-8 flex-col lg:flex-row-reverse jcstify-between">
 
-                    <div className="avatar w-5/12">
-                        <div className="w-10/12 mx-auto border-r-4 border-t-4 border-emerald-600 rounded-xl shadow-2xl">
-                            <Image src={about}/>
-                        </div>
+                    {/* Animated Image Section */}
+                    <div className="w-full md:w-5/12 flex justify-center md:justify-end">
+                        <motion.div
+                            className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96"
+                            initial="initial"
+                            animate="animate"
+                            whileHover="hover"
+                        >
+                            <motion.img
+                                src={banner}
+                                alt="Bijit Deb"
+                                className="w-full h-full object-cover rounded-full shadow-2xl border-4 border-blue-500/20"
+                                variants={imageAnimation}
+                            />
+
+                            <motion.div
+                                className="absolute -inset-3 sm:-inset-4 bg-blue-500/10 rounded-full -z-10"
+                                variants={glowAnimation}
+                            />
+
+                            {/* Floating Tech Icons */}
+                            {techIcons.map((tech, index) => (
+                                <motion.div
+                                    key={index}
+                                    className={`absolute ${tech.position} text-3xl`}
+                                    animate={{
+                                        y: [0, -10, 0],
+                                        transition: {
+                                            duration: 3 + index,
+                                            repeat: Infinity,
+                                            ease: 'easeInOut',
+                                            delay: index * 0.3,
+                                        },
+                                    }}
+                                >
+                                    {tech.icon}
+                                </motion.div>
+                            ))}
+                        </motion.div>
                     </div>
 
                     <div className="w-full lg:w-7/12 text-center lg:text-left">
@@ -46,7 +133,7 @@ const Home = () => {
                         </div>
 
                         <p className=" mb-6 Roboto font-medium text-lg text-white text-center lg:text-left">
-                            I am a web developer with 1+ years of experience in React. I have a strong foundation in front-end & back-end development, skilled in creating user-friendly and responsive web applications using React and its ecosystem.
+                            I'm a passionate developer from Bangladesh specializing in creating beautiful, functional websites and web applications.
                         </p>
 
                         {/* social links */}
@@ -103,20 +190,16 @@ const Home = () => {
                         <p>In every project, I bring a mindset of collaboration, accountability, and continuous improvement—qualities that help turn ideas into impactful digital experiences.</p>
                     </div>
 
-                    
+
                 </div>
             </div>
 
             {/* skill section */}
-            <section>
-                <div className="container mx-auto px-4 md:px-8 my-20">
-                    <h1 className="text-3xl font-bold Poppins text-white text-center mb-10">My Skills</h1>
-                    
-                </div>
-            </section>
+            <Skills />
 
+            {/* footer */} 
             <Footer />
-        </>
+        </div>
     );
 };
 
