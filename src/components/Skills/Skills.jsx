@@ -65,6 +65,9 @@ const Skills = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl text-design mb-8 font-extrabold">
                     My Skills
                 </h1>
+                <p className="text-white pb-2 text-lg px-5">
+                    I've worked with a wide range of technologies across frontend, backend, databases, and development tools.
+                </p>
             </div>
 
             {/* Filter buttons */}
@@ -74,8 +77,8 @@ const Skills = () => {
                         key={cat}
                         onClick={() => setActiveCategory(cat)}
                         className={`px-3 py-1 rounded-lg transition-colors duration-300 text-sm ${activeCategory === cat
-                                ? "bg-white text-black"
-                                : "bg-transparent text-white hover:bg-white hover:text-black"
+                            ? "bg-white text-black"
+                            : "bg-transparent text-white hover:bg-white hover:text-black"
                             }`}
                     >
                         {cat}
