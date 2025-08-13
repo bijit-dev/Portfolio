@@ -2,6 +2,7 @@ import Skills from "../components/Skills/Skills";
 import Banner from "../components/Banner/Banner";
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
+import Contact from "../components/Contact/Contact";
 
 
 const Home = () => {
@@ -19,6 +20,8 @@ const Home = () => {
             {/* projects */}
             <Projects/>
 
+            {/* Contact */}
+            <Contact/>
 
 
         </div>
