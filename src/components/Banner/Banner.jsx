@@ -1,4 +1,4 @@
-import Image from "../../components/Image"; 
+import Image from "../../components/Image";
 import linkedin from "../../assets/linkedin.png";
 import github from "../../assets/github.png";
 import xlogo from "../../assets/xlogo.png";
@@ -10,6 +10,7 @@ import { BsDownload } from "react-icons/bs";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { SiJavascript, SiMongodb } from "react-icons/si";
+import { Link } from "react-router";
 
 const Banner = () => {
     const stringValue = ["React Developer", "MERN Stack Developer", "Fontend Developer", "Full Stack Developer"];
@@ -116,7 +117,7 @@ const Banner = () => {
                         <h1 className="text-2xl md:text-3xl font-bold Poppins text-white">Hi! I'm </h1>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl  font-bold Poppins text-emerald-500">BIJIT <span className="text-white">DEB</span></h1>
                     </div>
-                    <div className=" text-3xl md:text-5xl lg:text-6xl font-bold text-emerald-500 my-5">
+                    <div className=" text-3xl md:text-5xl lg:text-6xl font-bold text-emerald-500 my-2 lg:my-5">
 
                         <Typewriter
                             options={{
@@ -134,37 +135,53 @@ const Banner = () => {
 
                     {/* social links */}
                     <div className="flex gap-6 items-center justify-center lg:justify-start">
-                        <a href="https://github.com/bijit-dev" className="avatar">
+                        <Link to="https://github.com/bijit-dev" className="avatar">
                             <div className="ring-success ring-offset-emerald-800  w-8 rounded-full ring-2 ring-offset-2">
                                 <Image src={github} />
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href="https://www.linkedin.com/in/bijit-deb/" className="avatar">
+                        <Link to="https://www.linkedin.com/in/bijit-deb/" className="avatar">
                             <div className="ring-success ring-offset-base-100 w-8 rounded-full ring-2 ring-offset-2">
                                 <Image src={linkedin} />
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href="https://x.com/bijitdeb01" className="avatar">
+                        <Link to="https://x.com/bijitdeb01" className="avatar">
                             <div className="ring-success ring-offset-base-100 w-8 rounded-full ring-2 ring-offset-2">
                                 <Image src={xlogo} />
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href="https://www.facebook.com/bijitdeb01" className="avatar">
+                        <Link to="https://www.facebook.com/bijitdeb01" className="avatar">
                             <div className="ring-success ring-offset-base-100 w-8 rounded-full ring-2 ring-offset-2">
                                 <Image src={facebook} />
                             </div>
+                        </Link>
+                    </div>
+
+                    {/* btns */}
+                    <div className="flex flex-col md:flex-row justify-center lg:justify-start gap-4 mt-6">
+                        {/* Download Resume */}
+                        <a 
+                            href="https://drive.google.com/uc?export=download&id=1V6HB_eOovNUy_bEFn9aROzP5aLXKuUBN"
+                            download="Bijit_Deb_Resume.pdf"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold transition-colors duration-300 shadow-md hover:shadow-lg"
+                        >
+                            <BsDownload className="text-xl" />
+                            Download Resume
                         </a>
+
+                        {/* View Projects */}
+                        <Link
+                            to="#projects" className="flex items-center justify-center gap-3 px-6 py-3 rounded-full border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white font-bold transition-colors duration-300 shadow-md hover:shadow-lg">
+                            <RiExternalLinkLine className="text-xl" />
+                            View My Projects
+                        </Link>
                     </div>
 
-                    {/* btns  */}
-                    <div className="md:flex justify-center lg:justify-start space-y-6 gap-5 mt-6">
-                        <button className="btn btn-success w-full md:w-auto rounded-3xl text-base Poppins font-meduim md:text-lg font-bold flex items-center gap-3 cursor-pointer">HIRE ME <RiExternalLinkLine /></button>
-                        <button className="btn btn-success btn-outline w-full md:w-auto rounded-3xl text-base Poppins font-meduim md:text-lg font-bold flex items-center gap-3 cursor-pointer">Download Resume <BsDownload /></button>
 
-                    </div>
 
                 </div>
             </div>
