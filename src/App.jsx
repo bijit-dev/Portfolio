@@ -1,9 +1,13 @@
-import Home from "./pages/Home";
+import { Outlet } from "react-router";
+import Navber from "./components/Navber/Navber";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
     <>
-      <Home/>
+      <Navber />
+      <Outlet/>
+      <Footer/>
     </>
   );
 };

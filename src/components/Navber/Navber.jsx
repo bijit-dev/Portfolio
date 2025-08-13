@@ -4,9 +4,9 @@ import Logo from "../../assets/logo.png";
 
 // Import some icons from react-icons (feather)
 import { FiHome, FiUser, FiCode, FiFolder, FiBookOpen, FiMail } from "react-icons/fi";
+import { NavLink } from "react-router";
 
 const sections = [
-  { id: "home", label: "Home", icon: <FiHome size={18} /> },
   { id: "about", label: "About", icon: <FiUser size={18} /> },
   { id: "skills", label: "Skills", icon: <FiCode size={18} /> },
   { id: "projects", label: "Projects", icon: <FiFolder size={18} /> },
@@ -56,6 +56,19 @@ const Navber = () => {
         <div className="navbar-end w-full">
           <div className="hidden lg:flex pr-6">
             <ul className="menu menu-horizontal px-1 flex gap-x-3 text-lg font-medium font-pop justify-end">
+              <li>
+                <NavLink to="/"
+                  className={`relative flex items-center gap-1 duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-emerald-600 after:transition-[width]
+                      hover:text-emerald-600 hover:after:w-full
+                      ${active === 'home'
+                      ? "text-emerald-600 after:w-full font-bold"
+                      : "text-accent"
+                    }`}
+                >
+                  <FiHome size={18} />
+                  Home
+                </NavLink>
+              </li>
               {sections.map(({ id, label, icon }) => (
                 <li key={id}>
                   <a
@@ -108,6 +121,19 @@ const Navber = () => {
               tabIndex={0}
               className="menu menu-sm right-0 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 gap-2 p-2 shadow"
             >
+              <li>
+                <NavLink to="/"
+                  className={`relative flex items-center gap-1 duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-emerald-600 after:transition-[width]
+                      hover:text-emerald-600 hover:after:w-full
+                      ${active === "home"
+                      ? "text-emerald-600 after:w-full font-bold"
+                      : "text-accent"
+                    }`}
+                >
+                  <FiHome size={18} />
+                  Home
+                </NavLink>
+              </li>
               {sections.map(({ id, label, icon }) => (
                 <li key={id}>
                   <a

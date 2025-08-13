@@ -1,5 +1,3 @@
-import Navber from "../components/Navber/Navber"
-import Footer from "../components/Footer/Footer";
 import Skills from "../components/Skills/Skills";
 import Banner from "../components/Banner/Banner";
 import About from "../components/About/About";
@@ -8,9 +6,7 @@ import Projects from "../components/Projects/Projects";
 
 const Home = () => {
     return (
-        <div id="home" className="bg-bg-base-200">
-            <Navber />
-
+        <div id="home" className="bg-base-200">
             {/* banner part */}
             <Banner></Banner>
 
@@ -23,8 +19,8 @@ const Home = () => {
             {/* projects */}
             <Projects/>
 
-            {/* footer */} 
-            <Footer />
+
+
         </div>
     );
 };
