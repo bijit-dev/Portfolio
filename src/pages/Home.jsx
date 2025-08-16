@@ -3,6 +3,7 @@ import Banner from "../components/Banner/Banner";
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact/Contact";
+import Education from "../components/Education/Education";
 
 
 const Home = () => {
@@ -19,6 +20,9 @@ const Home = () => {
 
             {/* projects */}
             <Projects/>
+
+            {/* Education */}
+            <Education/>
 
             {/* Contact */}
             <Contact/>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
@@ -7,11 +7,7 @@ import Swal from "sweetalert2";
 const Contact = () => {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-    useEffect(() => {
-        document.title = "Contact Me | Bijit Deb";
-    }, []);
-
-    const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -63,7 +59,7 @@ const Contact = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-900 p-6 text-gray-200 flex items-center">
+        <div id="contact" data-aos="fade-up" data-aos-duration="3000" className="min-h-screen bg-gray-900 p-6 text-gray-200 flex items-center">
             <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-4">
 
                 {/* Part 1: Contact Information */}
