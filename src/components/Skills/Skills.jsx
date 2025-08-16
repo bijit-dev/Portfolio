@@ -4,7 +4,6 @@ import { MdJavascript } from "react-icons/md";
 import { SiTailwindcss, SiVercel, SiMongodb, SiMysql, SiExpress, SiFirebase, SiNetlify, SiPostman, SiVite, SiJsonwebtokens, SiAxios } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
 import { DiDjango } from "react-icons/di";
-import Skillcard from "./Skillcard";
 
 const iconSize = 60;
 
@@ -51,47 +50,49 @@ const Skills = () => {
     const filteredSkills = activeCategory === "All" ? skills : skills.filter(skill => skill.category === activeCategory);
 
     return (
-        <section id="skills" data-aos="fade-up" data-aos-duration="3000" className="container mx-auto px-4 md:px-8 py-20">
-            
-            {/* Heading */}
-            <div className="text-center mb-12">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mb-4">
-                    My Skills
-                </h1>
-                <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                    I've worked with a wide range of technologies across frontend, backend, databases, and development tools.
-                </p>
-            </div>
+        <section id="skills" className="bg-gradient-to-br from-gray-900 via-gray-800 to-black">
 
-            {/* Filter buttons */}
-            <div className="flex justify-center gap-3 mb-12 flex-wrap">
-                {categories.map(cat => (
-                    <button
-                        key={cat}
-                        onClick={() => setActiveCategory(cat)}
-                        className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 text-sm ${activeCategory === cat
+            <div data-aos="fade-up" data-aos-duration="3000" className="container mx-auto px-4 md:px-8 py-20">
+                {/* Heading */}
+                <div className="text-center mb-12">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mb-4">
+                        My Skills
+                    </h1>
+                    <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                        I've worked with a wide range of technologies across frontend, backend, databases, and development tools.
+                    </p>
+                </div>
+
+                {/* Filter buttons */}
+                <div className="flex justify-center gap-3 mb-12 flex-wrap">
+                    {categories.map(cat => (
+                        <button
+                            key={cat}
+                            onClick={() => setActiveCategory(cat)}
+                            className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 text-sm ${activeCategory === cat
                                 ? "bg-emerald-500 text-white shadow-lg scale-105"
                                 : "bg-gray-800 text-gray-300 hover:bg-emerald-500 hover:text-white"
-                            }`}
-                    >
-                        {cat}
-                    </button>
-                ))}
-            </div>
+                                }`}
+                        >
+                            {cat}
+                        </button>
+                    ))}
+                </div>
 
-            {/* Skills grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                {filteredSkills.map((skill, index) => (
-                    <div
-                        key={index}
-                        data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom"
-                        className="flex flex-col items-center p-4 bg-gray-800/50 backdrop-blur-md rounded-2xl hover:scale-105 hover:shadow-emerald-500/50 transition-all duration-300 cursor-pointer"
-                    >
-                        <div className="text-5xl mb-2">{skill.icon}</div>
-                        <p className="text-white font-semibold text-center">{skill.text}</p>
-                    </div>
-                ))}
+                {/* Skills grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    {filteredSkills.map((skill, index) => (
+                        <div
+                            key={index}
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom"
+                            className="flex flex-col items-center p-4 bg-gray-800/50 backdrop-blur-md rounded-2xl hover:scale-105 hover:shadow-emerald-500/50 transition-all duration-300 cursor-pointer"
+                        >
+                            <div className="text-5xl mb-2">{skill.icon}</div>
+                            <p className="text-green-500 font-semibold text-center">{skill.text}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

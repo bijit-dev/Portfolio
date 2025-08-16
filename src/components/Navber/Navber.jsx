@@ -37,7 +37,7 @@ const Navber = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-base-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-gradient-to-br from-gray-900 via-gray-800 to-black shadow-sm">
       <div className="navbar container mx-auto px-4 md:px-8 Poppins">
         <a
           href="#home"
@@ -48,7 +48,7 @@ const Navber = () => {
               <Image src={Logo} />
             </div>
           </div>
-          <div className="font-extrabold text-xl md:text-2xl lg:text-3xl px-4">
+          <div className="font-extrabold text-white text-xl md:text-2xl lg:text-3xl px-4">
             <span className="text-emerald-600">BIJIT </span>DEB
           </div>
         </a>
