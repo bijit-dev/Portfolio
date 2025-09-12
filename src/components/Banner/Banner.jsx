@@ -2,7 +2,7 @@ import Image from "../../components/Image";
 import linkedin from "../../assets/linkedin.png";
 import github from "../../assets/github.png";
 import xlogo from "../../assets/xlogo.png";
-import facebook from "../../assets/facebook.jpeg";
+import whatsapp from "../../assets/whatsapp.png";
 import banner from "../../assets/banner.png";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
@@ -56,7 +56,7 @@ const Banner = () => {
         { icon: github, link: "https://github.com/bijit-dev"}, 
         { icon: linkedin, link: "https://www.linkedin.com/in/bijit-deb"}, 
         { icon: xlogo, link: "https://x.com/bijitdeb01"}, 
-        { icon: facebook, link: "https://www.facebook.com/bijitdeb01"}]
+        { icon: whatsapp, link: "https://wa.me/qr/KPMMTHVL73T6I1"}]
     return (
         <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-[90vh] flex items-center">
             {/* subtle background glow */}
