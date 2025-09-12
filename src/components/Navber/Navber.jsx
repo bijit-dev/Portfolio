@@ -8,6 +8,7 @@ import { NavLink } from "react-router";
 
 const sections = [
   { id: "about", label: "About", icon: <FiUser size={18} /> },
+  { id: "experience", label: "Experience", icon: <FiUser size={18} /> },
   { id: "skills", label: "Skills", icon: <FiCode size={18} /> },
   { id: "projects", label: "Projects", icon: <FiFolder size={18} /> },
   { id: "contact", label: "Contact", icon: <FiMail size={18} /> },
@@ -38,10 +39,10 @@ const Navber = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-br from-gray-900 via-gray-800 to-black shadow-sm">
-      <div className="navbar container mx-auto px-4 md:px-8 Poppins">
+      <div className="navbar container mx-auto px-4 md:px-4 Poppins">
         <a
           href="#home"
-          className="navbar-start w-[320px] cursor-pointer flex items-center"
+          className="navbar-start w-[300px] cursor-pointer flex items-center"
         >
           <div className="avatar">
             <div className="ring-primary ring-offset-base-100 w-8 md:w-14 rounded-full ring ring-offset-2">
@@ -53,9 +54,9 @@ const Navber = () => {
           </div>
         </a>
 
-        <div className="navbar-end w-full">
-          <div className="hidden lg:flex pr-6">
-            <ul className="menu menu-horizontal px-1 flex gap-x-3 text-lg font-medium font-pop justify-end">
+        <div className="inline-flex justify-end items-center w-full">
+          <div className="hidden lg:flex">
+            <ul className="menu menu-horizontal text-sm xl:text-lg font-medium font-pop justify-end">
               <li>
                 <NavLink to="/"
                   className={`relative flex items-center gap-1 duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-emerald-600 after:transition-[width]
@@ -71,9 +72,9 @@ const Navber = () => {
               </li>
               {sections.map(({ id, label, icon }) => (
                 <li key={id}>
-                  <a
-                    href={`#${id}`}
-                    className={`relative flex items-center gap-1 duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-emerald-600 after:transition-[width]
+                  <NavLink
+                    to={`#${id}`}
+                    className={`relative flex items-center duration-300 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-emerald-600 after:transition-[width]
                       hover:text-emerald-600 hover:after:w-full
                       ${active === id
                         ? "text-emerald-600 after:w-full font-bold"
@@ -82,7 +83,7 @@ const Navber = () => {
                   >
                     {icon}
                     {label}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -94,7 +95,7 @@ const Navber = () => {
               download="Bijit_Deb_Resume.pdf"
               rel="noopener noreferrer"
             >
-              <button className="btn btn-success font-bold cursor-pointer">
+              <button className="btn btn-success h-8 xl:h-10 font-bold cursor-pointer">
                 Resume
               </button>
             </a>
