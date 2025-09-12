@@ -52,6 +52,11 @@ const Banner = () => {
         { icon: <SiMongodb className="text-green-400" />, position: "bottom-0 left-4" },
     ];
 
+    const socialIcon = [
+        { icon: github, link: "https://github.com/bijit-dev"}, 
+        { icon: linkedin, link: "https://www.linkedin.com/in/bijit-deb"}, 
+        { icon: xlogo, link: "https://x.com/bijitdeb01"}, 
+        { icon: facebook, link: "https://www.facebook.com/bijitdeb01"}]
     return (
         <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-[90vh] flex items-center">
             {/* subtle background glow */}
@@ -125,10 +130,10 @@ const Banner = () => {
 
                     {/* Social Links */}
                     <div className="flex gap-6 justify-center lg:justify-start">
-                        {[github, linkedin, xlogo, facebook].map((icon, i) => (
-                            <Link key={i} to="#" className="avatar hover:scale-110 transition">
+                        {socialIcon.map((sI, i) => (
+                            <Link key={i} to={sI.link} className="avatar hover:scale-110 transition">
                                 <div className="w-9 rounded-full ring-2 ring-emerald-500/50 overflow-hidden">
-                                    <Image src={icon} />
+                                    <Image src={sI.icon} />
                                 </div>
                             </Link>
                         ))}
