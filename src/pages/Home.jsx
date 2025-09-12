@@ -4,6 +4,7 @@ import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact/Contact";
 import Education from "../components/Education/Education";
+import Experience from "../components/Experience/Experience";
 
 
 const Home = () => {
@@ -14,6 +15,9 @@ const Home = () => {
 
             {/* about section */}
             <About />
+            
+            {/* Experience */}
+            <Experience />
 
             {/* skill section */}
             <Skills />

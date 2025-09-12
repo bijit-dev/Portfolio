@@ -2,23 +2,18 @@ import { FaGraduationCap } from "react-icons/fa";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // make sure you import the CSS
+import { li } from "framer-motion/client";
 
-const educationData = [
+const experienceData = [
     {
-        year: "2020 - 2024",
-        degree: "Diploma in Computer Science & Technology",
-        institution: "Habiganj Polytechnic Institute, Bangladesh",
-        description: "Focused on web development, data structures, and full stack applications.",
-    },
-    {
-        year: "2018 - 2020",
-        degree: "Secondary School Certificate (SSC)",
-        institution: "Putijuri S. C. High School, Bangladesh",
-        description: "Completed secondary education with focus on science subjects.",
+        year: "August 2025 - present",
+        company: "WB Software Ltd",
+        Position: "Frontend Developer React (Intern)",
+        responsibility: ["Responsive Web Design", "API Integration", "Performance Optimization", "Cross-Browser Compatibility", "Version Control (Git)", "Collaboration & Communication", "Testing & Debugging", "Continuous Learning",, "UI/UX Principles"],
     },
 ];
 
-const Education = () => {
+const Experience = () => {
     useEffect(() => {
         AOS.init({ duration: 1200, once: true });
     }, []);
@@ -31,10 +26,10 @@ const Education = () => {
             {/* Heading */}
             <div className="text-center mb-12" data-aos="fade-down">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
-                    Education
+                    Experience
                 </h1>
                 <p className="text-gray-300 text-lg max-w-2xl mx-auto mt-4">
-                    My academic journey and milestones in learning.
+                    A journey of growth and learning in the world of web development.
                 </p>
             </div>
 
@@ -44,7 +39,7 @@ const Education = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 h-full md:border-l-2 md:border-emerald-500/40"></div>
 
                 <div className="space-y-12">
-                    {educationData.map((edu, index) => (
+                    {experienceData.map((edu, index) => (
                         <div
                             key={index}
                             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
@@ -56,9 +51,9 @@ const Education = () => {
                                     <FaGraduationCap className="text-2xl" />
                                     <span className="font-semibold text-lg">{edu.year}</span>
                                 </div>
-                                <h3 className="text-xl md:text-2xl font-bold text-white">{edu.degree}</h3>
-                                <p className="text-gray-300 font-medium">{edu.institution}</p>
-                                <p className="text-gray-400 mt-2">{edu.description}</p>
+                                <h3 className="text-xl md:text-2xl font-bold text-white">{edu.Position}</h3>
+                                <p className="text-gray-300 font-medium">Company: {edu.company}</p>
+                                <p className="text-gray-300 font-bold  mt-2">My Responsibility: <ul className="pl-10 font-normal text-gray-400">{edu.responsibility.map((i, index) => <li key={index}>{index+1}. {i}</li>)}</ul></p>
                             </div>
 
                             <div className="hidden md:block w-1/2 relative">
@@ -73,4 +68,4 @@ const Education = () => {
     );
 };
 
-export default Education;
+export default Experience;

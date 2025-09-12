@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
@@ -49,13 +49,15 @@ const Contact = () => {
 
     const infoItems = [
         { icon: <FaEnvelope />, text: "bijitdeb8@gmail.com" },
-        { icon: <FaPhone />, text: "+8801792374050" },
+        { icon: <FaWhatsapp />, text: "+8801792374050" },
     ];
 
     const socialLinks = [
         { icon: <FaGithub />, url: "https://github.com/bijit-dev" },
         { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/bijit-deb/" },
         { icon: <FaTwitter />, url: "https://twitter.com/bijitdeb.1" },
+        { icon: <FaWhatsapp />, url: "https://wa.me/qr/KPMMTHVL73T6I1" },
+        { icon: <FaFacebook />, url: "https://www.facebook.com/bijitdeb01" },
     ];
 
     return (
