@@ -141,19 +141,18 @@ const Banner = () => {
 
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a
-                            href="https://drive.google.com/uc?export=download&id=1V6HB_eOovNUy_bEFn9aROzP5aLXKuUBN"
+                        <Link to="https://drive.google.com/uc?export=download&id=1V6HB_eOovNUy_bEFn9aROzP5aLXKuUBN"
                             download="Bijit_Deb_Resume.pdf"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-3 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-md hover:shadow-emerald-500/40 transition"
+                            className="flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-md hover:shadow-emerald-500/40 transition"
                         >
                             <BsDownload className="text-xl" />
                             Download Resume
-                        </a>
+                        </Link>
 
                         <Link
                             to="#projects"
-                            className="flex items-center gap-3 px-6 py-3 rounded-full border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold shadow-md hover:shadow-emerald-500/40 transition"
+                            className="flex items-center justify-center gap-3 px-6 py-3 rounded-full border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold shadow-md hover:shadow-emerald-500/40 transition"
                         >
                             <RiExternalLinkLine className="text-xl" />
                             View My Projects
