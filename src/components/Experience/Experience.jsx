@@ -10,7 +10,7 @@ const experienceData = [
         company: "WB Software Ltd, Dhaka, Bangladesh",
         Position: "Frontend Developer React (Intern)",
         description: "Working as a Frontend Developer Intern at WB Software Ltd, I am actively involved in crafting dynamic and user-friendly web applications using React. My role encompasses collaborating with cross-functional teams to implement responsive designs, optimize performance, and ensure seamless user experiences. This internship has provided me with hands-on experience in modern web development practices, enhancing my skills in React, JavaScript, and front-end technologies.",
-        responsibility: ["Responsive Web Design", "API Integration", "Performance Optimization", "Cross-Browser Compatibility", "Version Control (Git)", "Collaboration & Communication", "Testing & Debugging", "Continuous Learning",, "UI/UX Principles (etc.)"],
+        responsibility: ["Responsive Web Design", "API Integration", "Performance Optimization", "Cross-Browser Compatibility", "Version Control (Git)", "Collaboration & Communication", "Testing & Debugging", "Continuous Learning", , "UI/UX Principles (etc.)"],
     },
 ];
 
@@ -46,9 +46,15 @@ const Experience = () => {
                                     <span className="font-semibold text-lg">{edu.year}</span>
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-bold text-white">{edu.Position}</h3>
-                                <p className="text-gray-300 font-medium">Company: {edu.company}</p>
-                                <p className="text-gray-400 text-justify">{edu.description}</p>
-                                <p className="flex gap-6 mt-2"><p className="text-gray-300 font-bold ">My Responsibility: </p><ul className="font-normal text-gray-400">{edu.responsibility.map((i, index) => <li key={index}>{index+1}. {i}</li>)}</ul></p>
+                                <div className="text-gray-300 font-medium">Company: {edu.company}</div>
+                                <div className="text-gray-400 text-justify">{edu.description}</div>
+
+                                <div className="flex gap-6 mt-2">
+                                    <div className="text-gray-300 font-bold ">My Responsibility: </div>
+                                    <ul className="font-normal text-gray-400">
+                                        {edu.responsibility.map((i, index) => <li key={index}>{index + 1}. {i}</li>)
+                                        }</ul>
+                                </div>
                             </div>
                         </div>
                     ))}
