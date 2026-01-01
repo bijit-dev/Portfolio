@@ -93,25 +93,35 @@ const Contact = () => {
                     transition={{ duration: 0.8 }}
                     className="bg-gradient-to-r from-purple-700 via-indigo-700 to-pink-700 p-1 rounded-2xl shadow-xl"
                 >
-                    <div className="bg-gray-900 p-8 rounded-2xl h-full flex flex-col justify-center gap-6">
+                    <div className="bg-gray-900 p-6 rounded-2xl h-full flex flex-col justify-center gap-5">
                         <h2 className="text-4xl font-bold text-purple-400 mb-4">
                             📬 Get in Touch
                         </h2>
-                        <p className="text-gray-300">
-                            Reach out via email, phone, or social media. I’d love to hear from you!
+                        <p className="text-gray-300 text-justify">
+                            Have a question, project idea, or just want to say hello? <br />
+                            Feel free to reach out via email, phone, or social media—I’d be happy to connect with you.
                         </p>
 
                         <div className="flex flex-col gap-4 mt-4">
-                            {infoItems.map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    whileHover={{ scale: 1.05, x: 5 }}
-                                    className="flex items-center gap-3 text-gray-200"
-                                >
-                                    <span className="text-purple-400 text-xl">{item.icon}</span>
-                                    <span>{item.text}</span>
-                                </motion.div>
-                            ))}
+                            {/* {infoItems.map((item, i) => ( */}
+                            <motion.div
+                                // key={i}
+                                whileHover={{ scale: 1.05, x: 5 }}
+                                className="flex items-center gap-3 text-gray-200"
+                            >
+                                <span className="text-purple-400 text-xl"><FaEnvelope /></span>
+                                <a href="mailto:bijitdeb8@gmail.com" className="cursor-pointer hover:text-emerald-500">bijitdeb8@gmail.com</a>
+
+                            </motion.div>
+                            <motion.div
+                                // key={i}
+                                whileHover={{ scale: 1.05, x: 5 }}
+                                className="flex items-center gap-3 text-gray-200"
+                            >
+                                <span className="text-purple-400 text-xl"><FaWhatsapp /></span>
+                                <a href="https://wa.me/+8801792374050" className="cursor-pointer hover:text-emerald-500">+8801792374050</a>
+                            </motion.div>
+                            {/* ))} */}
                         </div>
 
                         <div className="flex gap-6 mt-6">
@@ -136,7 +146,7 @@ const Contact = () => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="bg-gray-800 p-8 rounded-xl shadow-lg"
+                    className="bg-gray-800 p-6 rounded-xl shadow-lg"
                 >
                     <h2 className="text-3xl font-bold text-purple-400 mb-6">
                         ✉ Send Me a Message

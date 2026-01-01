@@ -44,8 +44,8 @@ const About = () => {
                         </h2>
                         <ul className="space-y-2 text-gray-300">
                             <li>👤 Full Name: Bijit Deb</li>
-                            <li>📧 Email: bijitdeb8@gmail.com</li>
-                            <li>📱 Phone: +8801792374050</li>
+                            <li>📧 Email: <a href="mailto:bijitdeb8@gmail.com" className="cursor-pointer hover:text-emerald-500">bijitdeb8@gmail.com</a></li>
+                            <li>📱 Phone: <a href="https://wa.me/+8801792374050" className="cursor-pointer hover:text-emerald-500">+8801792374050</a></li>
                         </ul>
                     </div>
                 </div>
