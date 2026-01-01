@@ -72,8 +72,8 @@ const Contact = () => {
     const socialLinks = [
         { icon: <FaGithub />, url: "https://github.com/bijit-dev" },
         { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/bijit-deb/" },
-        { icon: <FaTwitter />, url: "https://twitter.com/bijitdeb1" }, // fixed
-        { icon: <FaWhatsapp />, url: "https://wa.me/8801792374050" },  // cleaner link
+        { icon: <FaTwitter />, url: "https://twitter.com/bijitdeb1" },
+        { icon: <FaWhatsapp />, url: "https://wa.me/+8801792374050" },
         { icon: <FaFacebook />, url: "https://www.facebook.com/bijitdeb01" },
     ];
 

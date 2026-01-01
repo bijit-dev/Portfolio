@@ -56,7 +56,7 @@ const Banner = () => {
         { icon: github, link: "https://github.com/bijit-dev"}, 
         { icon: linkedin, link: "https://www.linkedin.com/in/bijit-deb"}, 
         { icon: xlogo, link: "https://x.com/bijitdeb01"}, 
-        { icon: whatsapp, link: "https://wa.me/qr/KPMMTHVL73T6I1"}]
+        { icon: whatsapp, link: "https://wa.me/+8801792374050"}]
     return (
         <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-[90vh] flex items-center">
             {/* subtle background glow */}
