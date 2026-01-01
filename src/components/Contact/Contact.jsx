@@ -64,11 +64,6 @@ const Contact = () => {
             );
     };
 
-    const infoItems = [
-        { icon: <FaEnvelope />, text: "bijitdeb8@gmail.com" },
-        { icon: <FaWhatsapp />, text: "+8801792374050" },
-    ];
-
     const socialLinks = [
         { icon: <FaGithub />, url: "https://github.com/bijit-dev" },
         { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/bijit-deb/" },
@@ -103,9 +98,7 @@ const Contact = () => {
                         </p>
 
                         <div className="flex flex-col gap-4 mt-4">
-                            {/* {infoItems.map((item, i) => ( */}
                             <motion.div
-                                // key={i}
                                 whileHover={{ scale: 1.05, x: 5 }}
                                 className="flex items-center gap-3 text-gray-200"
                             >
@@ -114,14 +107,12 @@ const Contact = () => {
 
                             </motion.div>
                             <motion.div
-                                // key={i}
                                 whileHover={{ scale: 1.05, x: 5 }}
                                 className="flex items-center gap-3 text-gray-200"
                             >
                                 <span className="text-purple-400 text-xl"><FaWhatsapp /></span>
                                 <a href="https://wa.me/+8801792374050" className="cursor-pointer hover:text-emerald-500">+8801792374050</a>
                             </motion.div>
-                            {/* ))} */}
                         </div>
 
                         <div className="flex gap-6 mt-6">
