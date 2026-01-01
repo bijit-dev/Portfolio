@@ -26,7 +26,7 @@ const Experience = () => {
         >
             {/* Heading */}
             <div className="text-center mb-12" data-aos="fade-down">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 pb-4">
                     Experience
                 </h1>
                 <p className="text-gray-300 text-lg max-w-2xl mx-auto mt-4">

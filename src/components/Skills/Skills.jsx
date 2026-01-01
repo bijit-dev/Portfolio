@@ -54,8 +54,8 @@ const Skills = () => {
 
             <div data-aos="fade-up" data-aos-duration="3000" className="container mx-auto px-4 md:px-8 py-20">
                 {/* Heading */}
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mb-4">
+                <div className="text-center pb-12">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 pb-4">
                         My Skills
                     </h1>
                     <p className="text-gray-300 text-lg max-w-2xl mx-auto">
